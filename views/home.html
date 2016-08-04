@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Home</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
+        <style>
+            html, body, input, select, textarea
+            {
+                font-size: 1.05em !important;
+            }
+        </style>
+        </head>
+        <body>
+
+    <center><h1 style="color:Green;">{{title}}</h1></center>
+
+    <div class="container">
+        <div class="row">
+        <center>
+         <div class="col-xs-12 col-sm-12">
+         <div ng-repeat="pla in planet">
+          <a href="#{{$index}}"><img src="{{pla.image}}" ng-model="pla.image"></a>
+           <a href="#{{$index}}"> <button class="btn btn-primary info" >
+             <h4>{{pla.name}}</h4><p>{{pla.caption}}</p>
+             </button></a>
+             </div>
+         </div>
+         </center>
+        </div>
+    </div>
+
+</body>
+</html>

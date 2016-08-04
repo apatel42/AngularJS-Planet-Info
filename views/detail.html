@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Planet Details</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/details.css">
+        <style>
+            html, body, input, select, textarea
+            {
+                font-size: 1.05em !important;
+            }
+        </style>
+        </head>
+        <body>
+
+    <div class="container">
+        <div class="row">
+        <center>
+         <div class="col-xs-12 col-sm-12">
+         <img src="{{planet[index].image}}" class="img-responsive">
+         </center>
+        </div>
+    </div>
+    <div class="container">
+    	<div class="row">
+    	<div class="col-xs-12 col-sm-12">
+    	 <h2 class="text-muted">{{planet[index].name}}</h2>
+         </div>
+    	</div>
+    </div>
+
+  <div class="container">
+      <div class="expandcollapse-item">
+        <div ng-click="active = !active" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}">
+         <button class="btn btn-info">More Details</button>
+        </div>
+
+        <div class="slideDown" ng-hide="active">
+          <div class="expand-collapse-content">
+             <h3 class="lead">{{planet[index].caption}}</h3>
+         <p class="lead">{{planet[index].detail}}</p>
+         <p class="lead">The <span>{{planet[index].name}}</span> temperature is <span>{{planet[index].temperature}} F</span> and radius is <span>{{planet[index].radius}}</span> </p>
+          </div>
+        </div>
+      </div>
+      <a href="#/"><button class="btn btn-primary" ng-click="prePage()">Done</button></a>
+    </div>
+</body>
+</html>
+
+

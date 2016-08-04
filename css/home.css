@@ -1,0 +1,20 @@
+.info{
+
+	width: 50%;
+	height:20%;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+img{
+	width: 10%;
+	height:10%;
+	margin-bottom: 20px;
+}
+p,h4{
+	text-align: left;
+	width: 50%;
+	height:20%;
+}
+h1{
+	margin-bottom: 50px;
+}
